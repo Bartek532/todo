@@ -1,8 +1,17 @@
-.todos {
+.todos,
+.doneTodos {
   background-color: #fff;
   padding: 15px 0;
   overflow-y: scroll;
   max-height: 50vh;
+  min-height: 225px;
+}
+
+.main {
+  background-color: transparent;
+  padding: 0;
+  max-width: 335px;
+  min-height: 225px;
 }
 
 .nothing {
@@ -18,50 +27,33 @@
   align-items: center;
 }
 
-.newTodo {
-  background: #fff;
-  padding: 20px;
+.clearAll {
+  width: 100%;
   display: flex;
+  padding: 20px;
   justify-content: center;
   position: relative;
+  background: #fff;
   border-radius: 0 0 10px 10px;
-  .circle {
-    background-color: #f38181;
-    position: absolute;
-    top: 20%;
+
+  button {
+    border: 0 none;
     color: #fff;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    background: #f38181;
+    padding: 8px 28px;
+    border: 2px solid #f38181;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
     cursor: pointer;
+    transition: 0.3s;
 
-    .icon {
-      transition: transform 0.4s;
-      margin-top: 2px;
-    }
-
-    .active {
-      transform-origin: 50% 40%;
-      transform: rotate(45deg);
+    &:hover {
+      color: #f38181;
+      background: #fff;
+      transition: 0.3s;
     }
   }
-}
-
-.newTodoField {
-  visibility: hidden;
-  position: relative;
-  z-index: -1;
-  transform-origin: 50% 0%;
-  transform: translateY(-50px) scale(0);
-  transition: 0.3s;
-}
-
-.newTodoFieldActive {
-  visibility: visible;
-  transform: translateY(0px) scale(1);
-  z-index: 1;
-  transition: 0.4s;
 }

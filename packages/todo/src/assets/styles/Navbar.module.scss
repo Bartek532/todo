@@ -1,8 +1,12 @@
 .nav {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .link {
     width: 50%;
+    display: block;
     text-align: center;
     background: #f0eee9;
     color: gray;
