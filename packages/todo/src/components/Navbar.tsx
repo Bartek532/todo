@@ -12,14 +12,14 @@ export const Navbar = () => {
         activeClassName={styles.active}
         exact
       >
-        <Calendar />
+        <Calendar className={styles.icon} />
       </NavLink>
       <NavLink
         to="/done"
         className={styles.link}
         activeClassName={styles.active}
       >
-        <Check />
+        <Check className={styles.icon} />
       </NavLink>
     </nav>
   );

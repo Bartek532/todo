@@ -14,11 +14,19 @@
     font-size: 1.6em;
     cursor: pointer;
     border-radius: 20px 20px 0 0;
+
+    .icon {
+      transform: translateY(5px);
+    }
   }
 
   .active {
     color: #9e73c8;
     background: #fff;
     cursor: default;
+
+    .icon path {
+      fill: #9e73c8;
+    }
   }
 }
