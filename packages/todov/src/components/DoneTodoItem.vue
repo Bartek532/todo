@@ -40,6 +40,7 @@ export default {
 
 .text {
   max-width: 200px;
+  word-break: break-all;
 }
 
 button {
