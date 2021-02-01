@@ -8,7 +8,7 @@ import { TodosProvider } from "./context/TodosContext";
 export const App = () => {
   return (
     <TodosProvider>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Switch>
           <Route path="/" exact component={MainTodos} />
