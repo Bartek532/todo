@@ -10,11 +10,11 @@ export const DoneTodos = memo(() => {
 
   if (!doneTodos.length) {
     return (
-      <div className={styles.nothing}>
+      <section className={styles.nothing}>
         You don't have any tasks done,
         <br />
         do something!
-      </div>
+      </section>
     );
   }
 

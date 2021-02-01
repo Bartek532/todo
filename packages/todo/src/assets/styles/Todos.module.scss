@@ -1,17 +1,16 @@
-.todos,
-.doneTodos {
-  background-color: #fff;
-  padding: 15px 0;
-  overflow-y: scroll;
-  max-height: 50vh;
-  min-height: 225px;
-}
-
 .main {
   background-color: transparent;
   padding: 0;
   max-width: 335px;
-  min-height: 225px;
+
+  .todos,
+  .doneTodos {
+    background-color: #fff;
+    padding: 15px 0;
+    overflow-y: scroll;
+    max-height: 50vh;
+    min-height: 225px;
+  }
 }
 
 .nothing {

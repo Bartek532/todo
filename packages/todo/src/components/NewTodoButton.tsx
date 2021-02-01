@@ -20,14 +20,14 @@ export const NewTodoButton = memo(() => {
   return (
     <>
       <section className={styles.newTodo}>
-        <div
+        <button
           className={styles.circle}
           onClick={() => setActiveAddForm(i => !i)}
         >
           <div className={`${styles.icon} ${activeAddForm && styles.active}`}>
             <Plus />
           </div>
-        </div>
+        </button>
       </section>
       <section
         className={`${styles.newTodoField} ${
