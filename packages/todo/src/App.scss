@@ -1,11 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400&display=swap");
 body {
-  width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background: linear-gradient(to right bottom, #fce38a, #f38181);
+  background: linear-gradient(to right bottom, #fce38a, var(--primary-color));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,4 +13,13 @@ body {
   box-sizing: border-box;
   font-family: "Alegreya Sans", sans-serif;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+:root {
+  --primary-color: #f38181;
+  --basic-white-color: #fff;
+  --inactive-color: #f0eee9;
+  --active-color: #9e73c8;
+  --done-todo-color: #ccc9c2;
+  --todo-button-color: #d9d6d0;
 }

@@ -1,11 +1,12 @@
 import styles from "../assets/styles/NewTodo.module.scss";
-import { useState, memo, useContext } from "react";
-import { TodosContext } from "../context/TodosContext";
+import { useState, memo } from "react";
 import { NewTodoItem } from "./NewTodoItem";
 import { ReactComponent as Plus } from "../assets/icons/plus.svg";
+import { useTodosContext } from "../useTodosContext";
+import classNames from "classnames";
 
 export const NewTodoButton = memo(() => {
-  const { setTodos } = useContext(TodosContext);
+  const { setTodos } = useTodosContext();
   const [activeAddForm, setActiveAddForm] = useState(false);
 
   const handleAddTodo = (text: string) => {
@@ -24,15 +25,19 @@ export const NewTodoButton = memo(() => {
           className={styles.circle}
           onClick={() => setActiveAddForm(i => !i)}
         >
-          <div className={`${styles.icon} ${activeAddForm && styles.active}`}>
+          <div
+            className={classNames(styles.icon, {
+              [styles.active]: activeAddForm
+            })}
+          >
             <Plus />
           </div>
         </button>
       </section>
       <section
-        className={`${styles.newTodoField} ${
-          activeAddForm && styles.newTodoFieldActive
-        }`}
+        className={classNames(styles.newTodoField, {
+          [styles.newTodoFieldActive]: activeAddForm
+        })}
       >
         <NewTodoItem addTodo={handleAddTodo} />
       </section>

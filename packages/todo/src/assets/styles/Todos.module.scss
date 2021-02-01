@@ -5,7 +5,7 @@
 
   .todos,
   .doneTodos {
-    background-color: #fff;
+    background-color: var(--basic-white-color);
     padding: 15px 0;
     overflow-y: scroll;
     max-height: 50vh;
@@ -14,7 +14,7 @@
 }
 
 .nothing {
-  background: #fff;
+  background: var(--basic-white-color);
   text-align: center;
   padding: 40px 60px;
   font-size: 1.5em;
@@ -32,15 +32,15 @@
   padding: 20px;
   justify-content: center;
   position: relative;
-  background: #fff;
+  background: var(--basic-white-color);
   border-radius: 0 0 10px 10px;
 
   button {
     border: 0 none;
-    color: #fff;
-    background: #f38181;
+    color: var(--basic-white-color);
+    background: var(--primary-color);
     padding: 8px 28px;
-    border: 2px solid #f38181;
+    border: 2px solidvar(--primary-color);
     font-size: 1.2em;
     font-weight: bold;
     border-radius: 5px;
@@ -50,8 +50,8 @@
     transition: 0.3s;
 
     &:hover {
-      color: #f38181;
-      background: #fff;
+      color: var(--primary-color);
+      background: var(--basic-white-color);
       transition: 0.3s;
     }
   }

@@ -1,12 +1,23 @@
-import { TodosContext } from "../context/TodosContext";
-import { useContext, memo } from "react";
+import { memo, useCallback } from "react";
 import { DoneTodoItem } from "../components/DoneTodoItem";
 import styles from "../assets/styles/Todos.module.scss";
+import { useTodosContext } from "../useTodosContext";
 
 export const DoneTodos = memo(() => {
-  const { todos, setTodos } = useContext(TodosContext);
+  const { todos, setTodos } = useTodosContext();
 
   const doneTodos = todos.filter(({ isDone }) => isDone);
+
+  const handleDeleteTodo = useCallback(
+    (id: number) => {
+      setTodos(todos => todos.filter(todo => todo.id !== id));
+    },
+    [todos]
+  );
+
+  const deleteAllDoneTodos = useCallback(() => {
+    setTodos(todos => todos.filter(({ isDone }) => !isDone));
+  }, [todos]);
 
   if (!doneTodos.length) {
     return (
@@ -17,14 +28,6 @@ export const DoneTodos = memo(() => {
       </section>
     );
   }
-
-  const handleDeleteTodo = (id: number) => {
-    setTodos(todos => todos.filter(todo => todo.id !== id));
-  };
-
-  const deleteAllDoneTodos = () => {
-    setTodos(todos => todos.filter(({ isDone }) => !isDone));
-  };
 
   return (
     <main className={styles.main}>

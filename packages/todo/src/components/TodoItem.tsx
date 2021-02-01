@@ -1,6 +1,7 @@
 import type { Todo } from "../todos";
 import { ReactComponent as Done } from "../assets/icons/done.svg";
 import styles from "../assets/styles/Todo.module.scss";
+import classNames from "classnames";
 export const TodoItem = ({
   todo,
   toggleTodo
@@ -9,7 +10,9 @@ export const TodoItem = ({
   toggleTodo: (id: number) => void;
 }) => {
   return (
-    <article className={`${styles.todo} ${todo.isDone && styles.checked}`}>
+    <article
+      className={classNames(styles.todo, { [styles.checked]: todo.isDone })}
+    >
       <button className={styles.toggle} onClick={() => toggleTodo(todo.id)}>
         <div className={styles.icon}>
           <Done />

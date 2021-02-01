@@ -8,10 +8,8 @@
     width: 50%;
     display: block;
     text-align: center;
-    background: #f0eee9;
-    color: gray;
-    padding: 20px 70px;
-    font-size: 1.6em;
+    background: var(--inactive-color);
+    padding: 22px 70px;
     cursor: pointer;
     border-radius: 20px 20px 0 0;
 
@@ -21,12 +19,11 @@
   }
 
   .active {
-    color: #9e73c8;
-    background: #fff;
+    background: var(--basic-white-color);
     cursor: default;
 
     .icon path {
-      fill: #9e73c8;
+      fill: var(--active-color);
     }
   }
 }
