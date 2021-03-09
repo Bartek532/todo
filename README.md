@@ -1,21 +1,59 @@
-# ToDo App
+<h1 align="center">
+ToDo App ✔️
+</h1>
+
+<br />
+
+## Project Overview 🎨
+
 Simple todo app to organize our tasks.
 
-## Stack
+## Tech/framework used 🧰
 
-* React
-  * HTML
-  * SCSS
-  * TypeScript
-  * React
-  * React Router
-  * Context API
-  * (S)CSS Modules
+- Common
 
-* Vue
-  * HTML
-  * CSS
-  * JavaScript
-  * Vue
+| Tech                                                  | Description                               |
+| ----------------------------------------------------- | ----------------------------------------- |
+| [Eslint](https://eslint.org/)                         | Javascript Linter                         |
+| [Prettier](https://prettier.io/)                      | Code formatter                            |
+| [Lerna](https://lerna.js.org)                  | Tool for managing projects with multiple packages|
 
-### App preview available [here](https://bartek532.github.io/todo)
+<br />
+
+- React
+
+| Tech                                                  | Description                               |
+| ----------------------------------------------------- | ----------------------------------------- |
+| [SCSS](https://sass-lang.com)                         | CSS with superpowers                      |
+| [Typescript](https://www.typescriptlang.org/)         | Javascript superset language              |
+| [React](https://reactjs.org/)                         | Library for building user interfaces      |
+| [Context API](reactjs.org/docs/context.html)          | Alternative to React Redux                |
+| [Reach Router](https://reach.tech/router)             | Declarative routing for React             |
+| [CSS Modules](https://github.com/css-modules/css-modules)| Styles convention in React             |
+
+<br />
+
+- Vue
+
+| Tech                                                  | Description                               |
+| ----------------------------------------------------- | ----------------------------------------- |
+| [SCSS](https://sass-lang.com)                         | CSS with superpowers                      |
+| [Typescript](https://www.typescriptlang.org/)         | Javascript superset language              |
+| [Vue](https://vuejs.org)                              | Progressive JavaScript Framework          |
+
+## Installation 💿
+
+```bash
+
+git clone https://github.com/Bartek532/weather-app.git
+
+npm install
+
+npm run start
+
+```
+
+## Live 🎆
+
+https://bartek532.github.io/todo
+
