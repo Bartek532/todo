@@ -38,7 +38,7 @@ Simple todo app to organize our tasks.
 | Tech                                                  | Description                               |
 | ----------------------------------------------------- | ----------------------------------------- |
 | [SCSS](https://sass-lang.com)                         | CSS with superpowers                      |
-| [Typescript](https://www.typescriptlang.org/)         | Javascript superset language              |
+| [JavaScript](https://www.javascript.com)              | Most powerful language to build websites              |
 | [Vue](https://vuejs.org)                              | Progressive JavaScript Framework          |
 
 ## Installation 💿
