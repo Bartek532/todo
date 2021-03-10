@@ -28,7 +28,7 @@ Simple todo app to organize our tasks.
 | [Typescript](https://www.typescriptlang.org/)             | Javascript superset language         |
 | [React](https://reactjs.org/)                             | Library for building user interfaces |
 | [Context API](https://reactjs.org/docs/context.html)      | Alternative to React Redux           |
-| [Reach Router](https://reactrouter.com)                   | Declarative routing for React        |
+| [React Router](https://reactrouter.com)                   | Declarative routing for React        |
 | [CSS Modules](https://github.com/css-modules/css-modules) | Styles convention in React           |
 
 <br />
