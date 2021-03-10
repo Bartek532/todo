@@ -46,8 +46,6 @@ Simple todo app to organize our tasks.
 
 <img src="https://i.ibb.co/DQVrMX1/todo.png" alt="todo app performance" />
 
-<br />
-
 ## Installation 💿
 
 ```bash
