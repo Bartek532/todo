@@ -44,7 +44,7 @@ Simple todo app to organize our tasks.
 
 ## Performance 💨
 
-<img src="https://i.ibb.co/DQVrMX1/todo.png" alt="todo app performance" border="0" align="center" />
+<img src="https://i.ibb.co/DQVrMX1/todo.png" alt="todo app performance" />
 
 <br />
 
