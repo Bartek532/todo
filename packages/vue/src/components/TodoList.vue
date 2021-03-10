@@ -1,35 +1,35 @@
 <template>
   <div>
     <div class="todo">
-      <div v-if="todos.length" class="todo-list">
+      <section v-if="todos.length" class="todo-list">
         <TodoItem
           v-for="todo in todos"
           :key="todo.id"
           :todo="todo"
           @remove="$emit('removeTodo', $event)"
         />
-      </div>
+      </section>
       <div class="something" v-else>
         There are no tasks,
         <br />everything is done!
       </div>
-      <div class="new-todo">
-        <div
-          :class="[{active:isNewTodoActive}, 'circle' ]"
+      <article class="new-todo">
+        <button
+          :class="[{ active: isNewTodoActive }, 'circle']"
           @click="isNewTodoActive = !isNewTodoActive"
         >
+          <span className="sr-only">add todo</span>
           <div class="icon">
             <i class="fas fa-plus"></i>
           </div>
-        </div>
-      </div>
-      <div :class="[{isActive: isNewTodoActive}, 'new-todo-field']">
+        </button>
+      </article>
+      <div :class="[{ isActive: isNewTodoActive }, 'new-todo-field']">
         <NewTodoItem @add="$emit('addTodo', $event)" />
       </div>
     </div>
   </div>
 </template>
-
 
 <script>
 import TodoItem from "./TodoItem.vue";
@@ -37,19 +37,19 @@ import NewTodoItem from "./NewTodoItem.vue";
 export default {
   components: {
     TodoItem,
-    NewTodoItem
+    NewTodoItem,
   },
   props: {
     todos: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      isNewTodoActive: false
+      isNewTodoActive: false,
     };
-  }
+  },
 };
 </script>
 

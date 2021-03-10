@@ -4,7 +4,7 @@ import styles from "../assets/styles/Todo.module.scss";
 import classNames from "classnames";
 export const TodoItem = ({
   todo,
-  toggleTodo
+  toggleTodo,
 }: {
   todo: Todo;
   toggleTodo: (id: number) => void;
@@ -14,6 +14,7 @@ export const TodoItem = ({
       className={classNames(styles.todo, { [styles.checked]: todo.isDone })}
     >
       <button className={styles.toggle} onClick={() => toggleTodo(todo.id)}>
+        <span className="sr-only">toggle done todo</span>
         <div className={styles.icon}>
           <Done />
         </div>

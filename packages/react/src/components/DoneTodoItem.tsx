@@ -5,7 +5,7 @@ import { ReactComponent as Close } from "../assets/icons/close.svg";
 
 export const DoneTodoItem = ({
   todo,
-  deleteTodo
+  deleteTodo,
 }: {
   todo: Todo;
   deleteTodo: (id: number) => void;
@@ -13,12 +13,14 @@ export const DoneTodoItem = ({
   return (
     <article className={`${styles.todo} ${styles.checked} ${styles.doneTodo}`}>
       <button className={styles.toggle}>
+        <span className="sr-only">checked checkbox</span>
         <div className={styles.icon}>
           <Done />
         </div>
       </button>
       <div className={styles.text}>{todo.text}</div>
       <button className={styles.close} onClick={() => deleteTodo(todo.id)}>
+        <span className="sr-only">remove todo</span>
         <Close />
       </button>
     </article>

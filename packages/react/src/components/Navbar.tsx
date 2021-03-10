@@ -12,6 +12,7 @@ export const Navbar = () => {
         activeClassName={styles.active}
         exact
       >
+        <span className="sr-only">active todos</span>
         <Calendar className={styles.icon} />
       </NavLink>
       <NavLink
@@ -19,6 +20,7 @@ export const Navbar = () => {
         className={styles.link}
         activeClassName={styles.active}
       >
+        <span className="sr-only">done todos</span>
         <Check className={styles.icon} />
       </NavLink>
     </nav>

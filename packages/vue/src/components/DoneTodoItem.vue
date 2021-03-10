@@ -1,26 +1,28 @@
 <template>
-  <div class="single-todo">
+  <article class="single-todo">
     <button>
+      <span className="sr-only">checked checkbox</span>
       <div class="icon">
         <i class="fas fa-check"></i>
       </div>
     </button>
     <div class="text">{{ doneTodo.text }}</div>
     <button @click="$emit('remove', doneTodo.id)" class="close">
+      <span className="sr-only">remove todo</span>
       <div class="icon">
         <i class="fas fa-times"></i>
       </div>
     </button>
-  </div>
+  </article>
 </template>
 
 <script>
 export default {
   props: {
     doneTodo: {
-      type: Object
-    }
-  }
+      type: Object,
+    },
+  },
 };
 </script>
 

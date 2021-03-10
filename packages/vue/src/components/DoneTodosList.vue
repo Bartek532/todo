@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="todo" v-if="doneTodos.length">
-      <div class="todo-list">
+      <section class="todo-list">
         <DoneTodoItem
           v-for="doneTodo in doneTodos"
           :key="doneTodo.id"
           :doneTodo="doneTodo"
           @remove="$emit('closeTodo', $event)"
         />
-      </div>
+      </section>
       <div class="clear-all">
         <button @click="$emit('clearAll')">Clear all</button>
       </div>
@@ -24,13 +24,13 @@
 import DoneTodoItem from "./DoneTodoItem.vue";
 export default {
   components: {
-    DoneTodoItem
+    DoneTodoItem,
   },
   props: {
     doneTodos: {
-      type: Array
-    }
-  }
+      type: Array,
+    },
+  },
 };
 </script>
 

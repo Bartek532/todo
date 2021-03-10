@@ -2,6 +2,7 @@
   <div>
     <div class="single-todo">
       <button @click="$emit('remove', todo.id)">
+        <span className="sr-only">toggle done todo</span>
         <div :class="[{ checked: todo.isTodoChecked }, 'icon']">
           <i class="fas fa-check"></i>
         </div>
@@ -20,9 +21,9 @@ export default {
   props: {
     todo: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 
@@ -72,7 +73,7 @@ div .text::after {
   width: 100%;
   height: 2px;
   content: "";
-  background: #ccc9c2;
+  background: #777470;
   transform-origin: 0% 0%;
   transform: scaleX(0);
   transition: 0.4s;
@@ -83,7 +84,7 @@ div .text::after {
   transition: 0.4s;
 }
 .checked.text {
-  color: #ccc9c2;
+  color: #777470;
   transition: 0.4s;
 }
 </style>

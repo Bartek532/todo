@@ -1,16 +1,34 @@
 <template>
-  <div>
-    <div class="top-icons">
-      <div :class="[{active: isFirstActive}, 'first']" @click="changeActiveField('first')">
+  <main>
+    <nav class="top-icons">
+      <div
+        :class="[{ active: isFirstActive }, 'first']"
+        @click="changeActiveField('first')"
+      >
+        <span className="sr-only">active todos</span>
         <i class="far fa-list-alt"></i>
       </div>
-      <div :class="[{active: isSecondActive}, 'second']" @click="changeActiveField('second')">
+      <div
+        :class="[{ active: isSecondActive }, 'second']"
+        @click="changeActiveField('second')"
+      >
+        <span className="sr-only">done todos</span>
         <i class="far fa-calendar-check"></i>
       </div>
-    </div>
-    <TodoList v-if="isFirstActive" :todos="todos" @removeTodo="removeTodo" @addTodo="addTodo" />
-    <DoneTodosList v-else :doneTodos="doneTodos" @closeTodo="closeTodo" @clearAll="clearAll" />
-  </div>
+    </nav>
+    <TodoList
+      v-if="isFirstActive"
+      :todos="todos"
+      @removeTodo="removeTodo"
+      @addTodo="addTodo"
+    />
+    <DoneTodosList
+      v-else
+      :doneTodos="doneTodos"
+      @closeTodo="closeTodo"
+      @clearAll="clearAll"
+    />
+  </main>
 </template>
 
 <script>
@@ -20,7 +38,7 @@ import DoneTodosList from "./components/DoneTodosList.vue";
 export default {
   components: {
     TodoList,
-    DoneTodosList
+    DoneTodosList,
   },
   data() {
     return {
@@ -28,32 +46,32 @@ export default {
         {
           id: TodoId++,
           text: "Call the dentist",
-          isTodoChecked: false
+          isTodoChecked: false,
         },
         {
           id: TodoId++,
           text: "Read an article",
-          isTodoChecked: false
+          isTodoChecked: false,
         },
         {
           id: TodoId++,
           text: "Check in to flight",
-          isTodoChecked: false
+          isTodoChecked: false,
         },
         {
           id: TodoId++,
           text: "Go for a walk",
-          isTodoChecked: false
+          isTodoChecked: false,
         },
         {
           id: TodoId++,
           text: "Create new project",
-          isTodoChecked: false
-        }
+          isTodoChecked: false,
+        },
       ],
       doneTodos: [],
       isFirstActive: true,
-      isSecondActive: false
+      isSecondActive: false,
     };
   },
   methods: {
@@ -79,7 +97,7 @@ export default {
         this.todos.push({
           id: TodoId++,
           text: text.trim(),
-          isTodoChecked: false
+          isTodoChecked: false,
         });
       }
     },
@@ -90,8 +108,8 @@ export default {
     clearAll() {
       this.doneTodos = [];
       this.todos = this.todos.filter(item => !item.isTodoChecked);
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -13,7 +13,7 @@ export const NewTodoButton = memo(() => {
     if (text && text.trim().length) {
       setTodos(todos => [
         ...todos,
-        { id: todos.length + 1, text, isDone: false }
+        { id: todos.length + 1, text, isDone: false },
       ]);
     }
   };
@@ -25,9 +25,10 @@ export const NewTodoButton = memo(() => {
           className={styles.circle}
           onClick={() => setActiveAddForm(i => !i)}
         >
+          <span className="sr-only">add todo</span>
           <div
             className={classNames(styles.icon, {
-              [styles.active]: activeAddForm
+              [styles.active]: activeAddForm,
             })}
           >
             <Plus />
@@ -36,7 +37,7 @@ export const NewTodoButton = memo(() => {
       </section>
       <section
         className={classNames(styles.newTodoField, {
-          [styles.newTodoFieldActive]: activeAddForm
+          [styles.newTodoFieldActive]: activeAddForm,
         })}
       >
         <NewTodoItem addTodo={handleAddTodo} />
