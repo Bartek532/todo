@@ -41,6 +41,12 @@ Simple todo app to organize our tasks.
 | [JavaScript](https://www.javascript.com) | Most powerful language to build websites |
 | [Vue](https://vuejs.org)                 | Progressive JavaScript Framework         |
 
+## Performance 💨
+
+<img src="https://i.ibb.co/SBsfmT6/todo.png" alt="todo app performance" border="0" align="center" />
+
+<br />
+
 ## Installation 💿
 
 ```bash
