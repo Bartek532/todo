@@ -41,7 +41,7 @@ Simple todo app to organize daily tasks.
 | [JavaScript](https://www.javascript.com) | Most powerful language to build websites |
 | [Vue 2](https://vuejs.org)               | Progressive JavaScript Framework         |
 | [Vuex](https://vuex.vuejs.org)           | State management for Vue.js              |
-| [Vuex](https://router.vuejs.org)         | Official router for Vue.js               |
+| [Vue Router](https://router.vuejs.org)   | Official router for Vue.js               |
 
 ## Performance 💨
 
