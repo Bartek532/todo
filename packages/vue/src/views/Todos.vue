@@ -41,6 +41,12 @@ export default {
     overflow-y: scroll;
     max-height: 50vh;
     min-height: 225px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .empty {

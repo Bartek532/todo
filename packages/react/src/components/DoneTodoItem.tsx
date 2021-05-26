@@ -11,18 +11,15 @@ export const DoneTodoItem = ({
   deleteTodo: (id: number) => void;
 }) => {
   return (
-    <article className={`${styles.todo} ${styles.checked} ${styles.doneTodo}`}>
-      <button className={styles.toggle}>
-        <span className="sr-only">checked checkbox</span>
-        <div className={styles.icon}>
-          <Done />
-        </div>
-      </button>
-      <div className={styles.text}>{todo.text}</div>
-      <button className={styles.close} onClick={() => deleteTodo(todo.id)}>
-        <span className="sr-only">remove todo</span>
+    <label className={styles.doneTodo}>
+      <input type="checkbox" className={styles.todoInput} checked disabled />
+      <div className={styles.checkmark}>
+        <Done className={styles.icon} />
+      </div>
+      <span className={styles.text}>{todo.text}</span>
+      <button className={styles.remove} onClick={() => deleteTodo(todo.id)}>
         <Close />
       </button>
-    </article>
+    </label>
   );
 };
