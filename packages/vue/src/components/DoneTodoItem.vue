@@ -1,64 +1,93 @@
 <template>
-  <article class="single-todo">
-    <button>
-      <span className="sr-only">checked checkbox</span>
-      <div class="icon">
-        <i class="fas fa-check"></i>
-      </div>
+  <label class="todo">
+    <input type="checkbox" class="todo__input" disabled checked />
+    <div class="checkmark">
+      <CheckIcon class="checkmark__icon" />
+    </div>
+    <span class="todo__description">
+      {{ todo.text }}
+    </span>
+    <button class="todo__remove" @click="$emit('remove', todo.id)">
+      <CloseIcon />
     </button>
-    <div class="text">{{ doneTodo.text }}</div>
-    <button @click="$emit('remove', doneTodo.id)" class="close">
-      <span className="sr-only">remove todo</span>
-      <div class="icon">
-        <i class="fas fa-times"></i>
-      </div>
-    </button>
-  </article>
+  </label>
 </template>
 
 <script>
+import CheckIcon from "../assets/icons/done.svg";
+import CloseIcon from "../assets/icons/close.svg";
 export default {
+  components: {
+    CloseIcon,
+    CheckIcon,
+  },
   props: {
-    doneTodo: {
+    todo: {
       type: Object,
+      required: true,
     },
   },
 };
 </script>
 
-<style scoped>
-.single-todo {
+<style lang="scss" scoped>
+.todo {
   width: 100%;
   display: grid;
   grid-template-columns: 0.9fr 4fr 0.5fr;
-  grid-gap: 0px;
+  grid-gap: 0;
   justify-content: center;
   align-items: center;
-  padding: 10px 20px;
-  margin: 0px;
+  padding: 10px 10px 10px 20px;
   background: #fff;
   font-size: 1.2em;
-}
 
-.text {
-  max-width: 200px;
-  word-break: break-all;
-}
+  &__input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
 
-button {
-  border: 3px solid #d9d6d0;
-  background: transparent;
-  width: 27px;
-  height: 27px;
-  font-size: 1em;
-  border-radius: 10px;
-  color: #9e73c8;
-}
+  .checkmark {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    border: 3px solid #d9d6d0;
+    border-radius: 10px;
 
-.close {
-  background: transparent;
-  border: 0 none;
-  margin: 0 10px;
-  cursor: pointer;
+    &__icon {
+      position: absolute;
+      top: -5.5px;
+      left: -2px;
+    }
+  }
+
+  &__description {
+    position: relative;
+    transition: color 0.4s;
+    width: max-content;
+    max-width: 200px;
+    word-break: break-all;
+    color: #777470;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      content: "";
+      background: #777470;
+      transform-origin: 0% 0%;
+      transition: transform 0.4s;
+    }
+  }
+
+  &__remove {
+    border: 0 none;
+    cursor: pointer;
+    background-color: transparent;
+  }
 }
 </style>
