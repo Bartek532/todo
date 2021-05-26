@@ -27,8 +27,8 @@ Simple todo app to organize our tasks.
 | [SCSS](https://sass-lang.com)                             | CSS with superpowers                 |
 | [Typescript](https://www.typescriptlang.org/)             | Javascript superset language         |
 | [React](https://reactjs.org/)                             | Library for building user interfaces |
-| [Context API](reactjs.org/docs/context.html)              | Alternative to React Redux           |
-| [Reach Router](https://reach.tech/router)                 | Declarative routing for React        |
+| [Context API](https://reactjs.org/docs/context.html)      | Alternative to React Redux           |
+| [React Router](https://reactrouter.com)                   | Declarative routing for React        |
 | [CSS Modules](https://github.com/css-modules/css-modules) | Styles convention in React           |
 
 <br />
@@ -39,7 +39,12 @@ Simple todo app to organize our tasks.
 | ---------------------------------------- | ---------------------------------------- |
 | [SCSS](https://sass-lang.com)            | CSS with superpowers                     |
 | [JavaScript](https://www.javascript.com) | Most powerful language to build websites |
-| [Vue](https://vuejs.org)                 | Progressive JavaScript Framework         |
+| [Vue 2](https://vuejs.org)                 | Progressive JavaScript Framework         |
+
+
+## Performance 💨
+
+<img src="https://i.ibb.co/DQVrMX1/todo.png" alt="todo app performance" />
 
 ## Installation 💿
 
