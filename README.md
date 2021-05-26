@@ -6,7 +6,7 @@ ToDo App ✔️
 
 ## Project Overview 🎨
 
-Simple todo app to organize our tasks.
+Simple todo app to organize daily tasks.
 
 ## Tech/framework used 🧰
 
@@ -39,8 +39,9 @@ Simple todo app to organize our tasks.
 | ---------------------------------------- | ---------------------------------------- |
 | [SCSS](https://sass-lang.com)            | CSS with superpowers                     |
 | [JavaScript](https://www.javascript.com) | Most powerful language to build websites |
-| [Vue 2](https://vuejs.org)                 | Progressive JavaScript Framework         |
-
+| [Vue 2](https://vuejs.org)               | Progressive JavaScript Framework         |
+| [Vuex](https://vuex.vuejs.org)           | State management for Vue.js              |
+| [Vuex](https://router.vuejs.org)         | Official router for Vue.js               |
 
 ## Performance 💨
 
@@ -50,7 +51,7 @@ Simple todo app to organize our tasks.
 
 ```bash
 
-git clone https://github.com/Bartek532/weather-app.git
+git clone https://github.com/Bartek532/todo.git
 
 cd packages/react or cd packages/vue
 
