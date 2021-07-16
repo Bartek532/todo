@@ -18,6 +18,7 @@ export const DoneTodoItem = ({
       </div>
       <span className={styles.text}>{todo.text}</span>
       <button className={styles.remove} onClick={() => deleteTodo(todo.id)}>
+        <span className="sr-only">delete todo</span>
         <Close />
       </button>
     </label>
