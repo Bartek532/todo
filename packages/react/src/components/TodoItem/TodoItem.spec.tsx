@@ -34,18 +34,11 @@ test("should trigger toggleTodo func when checkbox is pressed", () => {
     text: "Clean bathroom",
     isDone: true,
   };
+  const toggleTodo = jest.fn();
 
-  const utils = {
-    toggleTodo: (id: number) => {
-      console.log("todo");
-    },
-  };
-
-  const toggleSpy = jest.spyOn(utils, "toggleTodo");
-
-  render(<TodoItem todo={fakeTodo} toggleTodo={utils.toggleTodo} />);
+  render(<TodoItem todo={fakeTodo} toggleTodo={toggleTodo} />);
 
   const todo = screen.getByLabelText(/clean bathroom/i);
   userEvent.click(todo);
-  expect(toggleSpy).toHaveBeenCalled();
+  expect(toggleTodo).toHaveBeenCalled();
 });
