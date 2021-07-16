@@ -1,5 +1,5 @@
 import { memo, useCallback } from "react";
-import { DoneTodoItem } from "../components/DoneTodoItem";
+import { DoneTodoItem } from "../components/DoneTodoItem/DoneTodoItem";
 import styles from "../assets/styles/Todos.module.scss";
 import { useTodosContext } from "../useTodosContext";
 
