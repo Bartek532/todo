@@ -1,6 +1,6 @@
-import type { Todo } from "../todos";
-import { ReactComponent as Done } from "../assets/icons/done.svg";
-import styles from "../assets/styles/Todo.module.scss";
+import type { Todo } from "../../todos";
+import { ReactComponent as Done } from "../../assets/icons/done.svg";
+import styles from "../../assets/styles/Todo.module.scss";
 export const TodoItem = ({
   todo,
   toggleTodo,

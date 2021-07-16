@@ -1,4 +1,4 @@
-import { TodoItem } from "../components/TodoItem";
+import { TodoItem } from "../components/TodoItem/TodoItem";
 import { memo } from "react";
 import styles from "../assets/styles/Todos.module.scss";
 import { NewTodoButton } from "../components/NewTodoButton";
