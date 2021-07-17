@@ -1,4 +1,10 @@
-import { useState, createContext, Dispatch, SetStateAction } from "react";
+import {
+  useState,
+  createContext,
+  Dispatch,
+  SetStateAction,
+  useContext,
+} from "react";
 import { todosList, Todo } from "todos";
 
 type TodoContext = {
@@ -6,7 +12,7 @@ type TodoContext = {
   setTodos: Dispatch<SetStateAction<Todo[]>>;
 };
 
-export const TodosContext = createContext<TodoContext>({
+const TodosContext = createContext<TodoContext>({
   todos: [],
   setTodos: () => {},
 });
@@ -23,4 +29,12 @@ export const TodosProvider = (props: Props) => {
       {props.children}
     </TodosContext.Provider>
   );
+};
+
+export const useTodosContext = () => {
+  const context = useContext(TodosContext);
+  if (context === undefined) {
+    throw new Error("useTodosContext must be used within a TodosProvider");
+  }
+  return context;
 };

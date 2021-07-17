@@ -2,7 +2,7 @@ import styles from "assets/styles/NewTodo.module.scss";
 import { useState, memo } from "react";
 import { NewTodoItem } from "components/NewTodoItem/NewTodoItem";
 import { ReactComponent as Plus } from "assets/icons/plus.svg";
-import { useTodosContext } from "useTodosContext";
+import { useTodosContext } from "context/TodosContext";
 import classNames from "classnames";
 
 export const NewTodoButton = memo(() => {
