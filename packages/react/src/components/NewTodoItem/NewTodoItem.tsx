@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import styles from "../../assets/styles/NewTodo.module.scss";
+import styles from "assets/styles/NewTodo.module.scss";
 
 export const NewTodoItem = ({
   addTodo,

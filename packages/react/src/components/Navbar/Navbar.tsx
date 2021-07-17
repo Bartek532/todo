@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { ReactComponent as Calendar } from "../../assets/icons/calendar.svg";
-import { ReactComponent as Check } from "../../assets/icons/check.svg";
-import styles from "../../assets/styles/Navbar.module.scss";
+import { ReactComponent as Calendar } from "assets/icons/calendar.svg";
+import { ReactComponent as Check } from "assets/icons/check.svg";
+import styles from "assets/styles/Navbar.module.scss";
 
 export const Navbar = () => {
   return (

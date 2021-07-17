@@ -1,7 +1,7 @@
 import { memo, useCallback } from "react";
-import { DoneTodoItem } from "../components/DoneTodoItem/DoneTodoItem";
-import styles from "../assets/styles/Todos.module.scss";
-import { useTodosContext } from "../useTodosContext";
+import { DoneTodoItem } from "components/DoneTodoItem/DoneTodoItem";
+import styles from "assets/styles/Todos.module.scss";
+import { useTodosContext } from "useTodosContext";
 
 export const DoneTodos = memo(() => {
   const { todos, setTodos } = useTodosContext();

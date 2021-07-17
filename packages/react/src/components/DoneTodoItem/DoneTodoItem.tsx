@@ -1,7 +1,7 @@
-import type { Todo } from "../../todos";
-import styles from "../../assets/styles/Todo.module.scss";
-import { ReactComponent as Done } from "../../assets/icons/done.svg";
-import { ReactComponent as Close } from "../../assets/icons/close.svg";
+import type { Todo } from "todos";
+import styles from "assets/styles/Todo.module.scss";
+import { ReactComponent as Done } from "assets/icons/done.svg";
+import { ReactComponent as Close } from "assets/icons/close.svg";
 
 export const DoneTodoItem = ({
   todo,

@@ -1,5 +1,5 @@
 import { useState, createContext, Dispatch, SetStateAction } from "react";
-import { todosList, Todo } from "../todos";
+import { todosList, Todo } from "todos";
 
 type TodoContext = {
   todos: Todo[];
@@ -8,7 +8,7 @@ type TodoContext = {
 
 export const TodosContext = createContext<TodoContext>({
   todos: [],
-  setTodos: () => {}
+  setTodos: () => {},
 });
 
 type Props = {

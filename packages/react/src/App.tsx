@@ -1,9 +1,9 @@
-import "./App.scss";
+import "App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { MainTodos } from "./views/MainTodos";
-import { DoneTodos } from "./views/DoneTodos";
-import { Navbar } from "./components/Navbar/Navbar";
-import { TodosProvider } from "./context/TodosContext";
+import { MainTodos } from "views/MainTodos";
+import { DoneTodos } from "views/DoneTodos";
+import { Navbar } from "components/Navbar/Navbar";
+import { TodosProvider } from "context/TodosContext";
 
 export const App = () => {
   return (
