@@ -1,8 +1,8 @@
-import styles from "../assets/styles/NewTodo.module.scss";
+import styles from "../../assets/styles/NewTodo.module.scss";
 import { useState, memo } from "react";
-import { NewTodoItem } from "./NewTodoItem/NewTodoItem";
-import { ReactComponent as Plus } from "../assets/icons/plus.svg";
-import { useTodosContext } from "../useTodosContext";
+import { NewTodoItem } from "../NewTodoItem/NewTodoItem";
+import { ReactComponent as Plus } from "../../assets/icons/plus.svg";
+import { useTodosContext } from "../../useTodosContext";
 import classNames from "classnames";
 
 export const NewTodoButton = memo(() => {
@@ -33,13 +33,14 @@ export const NewTodoButton = memo(() => {
           </div>
         </button>
       </section>
-      <section
+      <article
         className={classNames(styles.newTodoField, {
           [styles.newTodoFieldActive]: activeAddForm,
         })}
+        aria-label="add-form"
       >
         <NewTodoItem addTodo={handleAddTodo} />
-      </section>
+      </article>
     </>
   );
 });
