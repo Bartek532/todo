@@ -14,8 +14,10 @@ export const NewTodoItem = ({
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addTodo(todoText);
-    setTodoText("");
+    if (todoText && todoText.trim().length) {
+      addTodo(todoText);
+      setTodoText("");
+    }
   };
 
   return (

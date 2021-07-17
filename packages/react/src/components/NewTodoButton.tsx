@@ -10,12 +10,10 @@ export const NewTodoButton = memo(() => {
   const [activeAddForm, setActiveAddForm] = useState(false);
 
   const handleAddTodo = (text: string) => {
-    if (text && text.trim().length) {
-      setTodos(todos => [
-        ...todos,
-        { id: todos.length + 1, text, isDone: false },
-      ]);
-    }
+    setTodos(todos => [
+      ...todos,
+      { id: todos.length + 1, text, isDone: false },
+    ]);
   };
 
   return (
