@@ -1,8 +1,8 @@
 import { ChangeEvent, useState } from "react";
-import styles from "../assets/styles/NewTodo.module.scss";
+import styles from "../../assets/styles/NewTodo.module.scss";
 
 export const NewTodoItem = ({
-  addTodo
+  addTodo,
 }: {
   addTodo: (text: string) => void;
 }) => {
@@ -14,8 +14,8 @@ export const NewTodoItem = ({
 
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    addTodo(todoText);
     setTodoText("");
-    return addTodo(todoText);
   };
 
   return (

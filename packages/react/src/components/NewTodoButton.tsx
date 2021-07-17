@@ -1,6 +1,6 @@
 import styles from "../assets/styles/NewTodo.module.scss";
 import { useState, memo } from "react";
-import { NewTodoItem } from "./NewTodoItem";
+import { NewTodoItem } from "./NewTodoItem/NewTodoItem";
 import { ReactComponent as Plus } from "../assets/icons/plus.svg";
 import { useTodosContext } from "../useTodosContext";
 import classNames from "classnames";
