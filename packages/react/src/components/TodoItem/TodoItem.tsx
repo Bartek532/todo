@@ -9,7 +9,7 @@ export const TodoItem = ({
   toggleTodo: (id: number) => void;
 }) => {
   return (
-    <label className={styles.todo}>
+    <label className={styles.todo} data-testid="todo">
       <input
         type="checkbox"
         className={styles.todoInput}

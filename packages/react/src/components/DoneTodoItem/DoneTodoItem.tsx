@@ -11,7 +11,7 @@ export const DoneTodoItem = ({
   deleteTodo: (id: number) => void;
 }) => {
   return (
-    <label className={styles.doneTodo}>
+    <label className={styles.doneTodo} data-testid="done-todo">
       <input type="checkbox" className={styles.todoInput} checked disabled />
       <div className={styles.checkmark}>
         <Done className={styles.icon} />

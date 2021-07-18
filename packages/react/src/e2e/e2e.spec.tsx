@@ -6,8 +6,8 @@ test("full app working", () => {
   render(<App />);
 
   //render all todos
-  const todos = screen.getAllByLabelText(/(.*?)/i);
-  expect(todos).toHaveLength(6);
+  const todos = screen.getAllByTestId("todo");
+  expect(todos).toHaveLength(5);
 
   //one is checked
   expect(screen.getByLabelText(/go for a walk/i)).toBeChecked();
@@ -19,14 +19,25 @@ test("full app working", () => {
 
   //checked todos are presented in done todos section
   userEvent.click(screen.getByRole("link", { name: /done todos/i }));
-  expect(screen.getAllByLabelText(/(.*?)/i)).toHaveLength(2);
+  expect(screen.getAllByTestId("done-todo")).toHaveLength(2);
 
   //on delete button press done todo is deleted
   const deleteButton = screen.getAllByRole("button", {
     name: /delete todo/i,
   })[0];
   userEvent.click(deleteButton);
-  expect(screen.getAllByLabelText(/(.*?)/i)).toHaveLength(1);
+  expect(screen.getAllByTestId("done-todo")).toHaveLength(1);
   userEvent.click(screen.getByRole("link", { name: /active todos/i }));
-  expect(screen.getAllByLabelText(/(.*?)/i)).toHaveLength(5);
+  expect(screen.getAllByTestId("todo")).toHaveLength(4);
+
+  //clear all button cleared all todos which are done
+  //but first check all todos ;)
+  userEvent.click(screen.getByLabelText(/read an article/i));
+  userEvent.click(screen.getByLabelText(/check in to flight/i));
+  userEvent.click(screen.getByLabelText(/create new project/i));
+  userEvent.click(screen.getByRole("link", { name: /done todos/i }));
+  userEvent.click(screen.getByRole("button", { name: /clear all/i }));
+  expect(screen.queryAllByTestId("done-todo")).toHaveLength(0);
+  userEvent.click(screen.getByRole("link", { name: /active todos/i }));
+  expect(screen.queryAllByTestId("todo")).toHaveLength(0);
 });
