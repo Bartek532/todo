@@ -50,4 +50,15 @@ test("full app working", () => {
     /you don't have any tasks done/i
   );
   expect(emptyDoneTodosMessage).toBeInTheDocument();
+
+  //clear all button is not visible
+  expect(
+    screen.queryByRole("button", { name: /clear all/i })
+  ).not.toBeInTheDocument();
+
+  //add new todo with add new todo form
+  userEvent.click(screen.getByRole("link", { name: /active todos/i }));
+  userEvent.type(screen.getByPlaceholderText(/add a task/i), "go to the gym");
+  userEvent.click(screen.getByRole("button", { name: "Add" }));
+  expect(screen.queryAllByTestId("todo")).toHaveLength(1);
 });
