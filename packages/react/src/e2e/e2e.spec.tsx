@@ -40,4 +40,14 @@ test("full app working", () => {
   expect(screen.queryAllByTestId("done-todo")).toHaveLength(0);
   userEvent.click(screen.getByRole("link", { name: /active todos/i }));
   expect(screen.queryAllByTestId("todo")).toHaveLength(0);
+
+  //empty list messages are presented when todos' lists are empty
+  const emptyTodosMessage = screen.getByText(/there are no tasks/i);
+  expect(emptyTodosMessage).toBeInTheDocument();
+  userEvent.click(screen.getByRole("link", { name: /done todos/i }));
+
+  const emptyDoneTodosMessage = screen.getByText(
+    /you don't have any tasks done/i
+  );
+  expect(emptyDoneTodosMessage).toBeInTheDocument();
 });
