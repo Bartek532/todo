@@ -8,6 +8,7 @@
       {{ todo.text }}
     </span>
     <button class="todo__remove" @click="$emit('remove', todo.id)">
+      <span class="sr-only">delete todo</span>
       <CloseIcon />
     </button>
   </label>
@@ -17,6 +18,7 @@
 import CheckIcon from "../assets/icons/done.svg";
 import CloseIcon from "../assets/icons/close.svg";
 export default {
+  name: "DoneTodoItem",
   components: {
     CloseIcon,
     CheckIcon,
