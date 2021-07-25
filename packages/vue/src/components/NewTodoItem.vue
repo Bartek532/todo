@@ -6,7 +6,11 @@
         <PlusIcon :class="['icon', { active: isOpen }]" />
       </button>
     </div>
-    <form :class="['form', { active: isOpen }]" @submit.prevent="handleAddTodo">
+    <form
+      :class="['form', { active: isOpen }]"
+      @submit.prevent="handleAddTodo"
+      aria-label="add-form"
+    >
       <input
         type="text"
         placeholder="Add a task"
