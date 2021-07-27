@@ -14,14 +14,11 @@ const router = new VueRouter({
 });
 
 test("full app rendering/navigating", async () => {
-  console.log(store);
   render(App, { routes: router, store });
 
   expect(screen.getByText(/check in to flight/i)).toBeInTheDocument();
 
   await fireEvent.click(screen.getByRole("link", { name: /done todos/i }));
 
-  expect(
-    screen.getByText(/you don't have any tasks done/i)
-  ).toBeInTheDocument();
+  expect(screen.getByText(/go for a walk/i)).toBeInTheDocument();
 });

@@ -1,5 +1,5 @@
 <template>
-  <label class="todo">
+  <label class="todo" data-testid="done-todo">
     <input type="checkbox" class="todo__input" disabled checked />
     <div class="checkmark">
       <CheckIcon class="checkmark__icon" />

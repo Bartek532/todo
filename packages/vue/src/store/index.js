@@ -25,7 +25,7 @@ export const store = new Vuex.Store({
       {
         id: 4,
         text: "Go for a walk",
-        isDone: false,
+        isDone: true,
       },
       {
         id: 5,

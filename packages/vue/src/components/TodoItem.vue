@@ -1,5 +1,5 @@
 <template>
-  <label class="todo">
+  <label class="todo" data-testid="todo">
     <input
       type="checkbox"
       :checked="todo.isDone"
