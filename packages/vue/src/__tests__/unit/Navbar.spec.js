@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import Todos from "@/views/Todos.vue";
 import DoneTodos from "@/views/DoneTodos.vue";
 import App from "@/App.vue";
-import { store } from "../store";
+import { store } from "@/store";
 
 const router = new VueRouter({
   mode: "history",
