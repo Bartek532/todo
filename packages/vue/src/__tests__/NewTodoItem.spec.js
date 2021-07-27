@@ -1,9 +1,4 @@
-import {
-  screen,
-  render,
-  fireEvent,
-  createLocalVue,
-} from "@testing-library/vue";
+import { screen, render, fireEvent } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 import NewTodoItem from "@/components/NewTodoItem";
 import Vuex from "vuex";
