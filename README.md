@@ -27,8 +27,7 @@ Simple todo app to organize daily tasks.
 | [SCSS](https://sass-lang.com)                                                          | CSS with superpowers                 |
 | [Typescript](https://www.typescriptlang.org/)                                          | Javascript superset language         |
 | [React](https://reactjs.org/)                                                          | Library for building user interfaces |
-| [Context API](https://reactjs.org/docs/context.html)                                   | React structure that enables to share data with multiple components
-           |
+| [Context API](https://reactjs.org/docs/context.html)                                   | React structure that enables to share data with multiple components|
 | [React Router](https://reactrouter.com)                                                | Declarative routing for React        |
 | [CSS Modules](https://github.com/css-modules/css-modules)                              | Styles convention in React           |
 | [Jest](https://jestjs.io)                                                              | Javascript Testing Framework         |
